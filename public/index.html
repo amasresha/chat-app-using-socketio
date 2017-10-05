@@ -5,7 +5,16 @@
   </head>
   <body>
     <p> what is up front end!</p>
-
+<script src ="/socket.io/socket.io.js"></script>
+<script>
+var socket=io();
+socket.on('connect', () => {
+  console.log("Connected to Server!");
+});
+socket.on("disconnect", (socket)=>{
+  console.log("Disconnected from the server");
+})
+</script>
   </body>
 
 </html>
